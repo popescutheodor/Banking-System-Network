@@ -1,0 +1,64 @@
+MLS 3
+
+en
+conf t
+
+hostname Layer-3-SW
+banner motd #This is Layer-3-SW#
+
+line console 0
+password cisco
+login
+exit
+
+ip domain-name cisco.net
+username cisco password cisco
+ip domain-name cisco.net
+crypto key generate rsa
+1024
+line vty 0 15
+login local
+transport input ssh
+exit
+
+
+
+no ip domain-lookup
+enable password cisco
+service password-encryption
+
+do wr
+
+
+
+Router
+
+en
+conf t
+
+hostname Core-LayerR
+banner motd #This is Core-LayerR#
+
+line console 0
+password cisco
+login
+exit
+
+ip domain-name cisco.net
+username cisco password cisco
+ip domain-name cisco.net
+crypto key generate rsa
+1024
+line vty 0 15
+login local
+transport input ssh
+exit
+
+
+
+no ip domain-lookup
+enable password cisco
+service password-encryption
+
+do wr
+

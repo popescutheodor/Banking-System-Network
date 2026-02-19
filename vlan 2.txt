@@ -1,0 +1,100 @@
+vlan 10
+vlan 20
+vlan 30
+vlan 40
+vlan 50
+vlan 60
+
+
+ip helper-address 192.168.12.196
+
+STANGA
+int vlan 10
+no sh
+ip add 192.168.10.1 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 20
+no sh
+ip add 192.168.10.65 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 30
+no sh
+ip add 192.168.10.129 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+
+int vlan 40
+no sh
+ip add 192.168.10.193 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 50
+no sh
+ip add 192.168.11.1 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 60
+no sh
+ip add 192.168.11.65 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+do wr
+
+DREAPTA
+
+vlan 70
+vlan 80
+vlan 90
+vlan 100
+vlan 110
+vlan 120
+
+
+int vlan 70
+no sh
+ip add 192.168.11.129 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 80
+no sh
+ip add 192.168.11.193 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 90
+no sh
+ip add 192.168.12.1 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+
+int vlan 100
+no sh
+ip add 192.168.12.65 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 110
+no sh
+ip add 192.168.12.129 255.255.255.192
+ip helper-address 192.168.12.196
+exit
+
+int vlan 120
+no sh
+ip add 192.168.12.193 255.255.255.192
+exit
+
+
+do wr
+
+

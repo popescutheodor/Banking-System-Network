@@ -1,0 +1,21 @@
+en
+conf t
+
+hostname Layer-2-SW
+banner motd #This is Layer-2-SW#
+
+line console 0
+password cisco
+login
+exit
+
+line vty 0 15
+password cisco
+login
+exit
+
+no ip domain-lookup
+enable password cisco
+service password-encryption
+
+do wr
